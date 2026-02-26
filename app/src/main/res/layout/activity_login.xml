@@ -24,13 +24,13 @@
 
             <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
+                android:layout_height="200dp"
                 android:src="@drawable/pesolve_logo" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="150dp"
+                android:paddingTop="120dp"
                 android:text="Pesolve"
                 android:textColor="@color/offWhite"
                 android:textSize="60dp"
@@ -46,7 +46,10 @@
             android:layout_marginHorizontal="30dp"
             app:cardBackgroundColor="@color/lightBlack"
             app:cardCornerRadius="10dp"
-            app:contentPadding="15dp">
+            app:contentPaddingLeft="15dp"
+            app:contentPaddingRight="15dp"
+            app:contentPaddingTop="20dp"
+            app:contentPaddingBottom="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -79,39 +82,98 @@
                     android:textColor="@color/offWhite"/>
 
                 <EditText
+                    android:id="@+id/emailInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter your username"
+                    android:hint="Enter your email"
                     android:background="@drawable/custom_input"
                     android:padding="10dp"
                     android:textColorHint="@color/offGray"
-                    android:textSize="15dp"
-                    android:layout_marginBottom="15dp"/>
-                <TextView
+                    android:textSize="18dp"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="15dp"
+                    android:drawableStart="@drawable/baseline_email_24"
+                    android:drawablePadding="10dp"/>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Password"
-                    android:textSize="15dp"
-                    android:paddingBottom="3dp"
-                    android:textColor="@color/offWhite"/>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textSize="15dp"
+                        android:paddingBottom="3dp"
+                        android:textColor="@color/offWhite"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Forgot Password?"
+                        android:textColor="@color/gold"
+                        android:layout_weight="1.5"/>
+                </LinearLayout>
+
 
                 <EditText
+                    android:id="@+id/passwordInput"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Enter your username"
                     android:background="@drawable/custom_input"
                     android:padding="10dp"
                     android:textColorHint="@color/offGray"
-                    android:textSize="15dp"/>
+                    android:textColor="@color/white"
+                    android:textSize="18dp"
+                    android:drawableStart="@drawable/lock"
+                    android:drawablePadding="10dp"/>
 
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/loginButton"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:text="LOGIN"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:background="@drawable/custom_button"
                     android:textSize="15dp"
                     android:fontFamily="sans-serif-medium"/>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginVertical="20dp"
+                    android:background="@color/offGray"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Don't have an account?"
+                        android:paddingRight="5dp"
+                        android:textSize="13dp"
+                        android:textColor="@color/offGray"
+                        />
+
+                    <TextView
+                        android:id="@+id/createButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create one."
+                        android:textSize="13dp"
+                        android:textColor="@color/gold"/>
+
+                </LinearLayout>
+
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

@@ -1,5 +1,6 @@
 package com.example.pesolve;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -27,5 +28,12 @@ public class LoginActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        binding.createButton.setOnClickListener(v -> {
+            startActivity(new Intent(this, CreateAccountActivity.class));
+        });
+
+
+
     }
 }
